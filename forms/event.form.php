@@ -44,7 +44,7 @@ if(isset($_POST["submit"]))
 
         if(!$error)
         {
-            if(isset($_FILES['image']) && $_FILES['user-image']['error'] == UPLOAD_ERR_OK)
+            if(isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK)
             {
                 $fileType = array_reverse(explode( '.', $_FILES['image']['name']) )[0];
                 $imageUri = $eventId.'_eventimg.'.$fileType;
