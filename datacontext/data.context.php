@@ -2,11 +2,15 @@
 
 class DataContext 
 {
-    private $dsn = 'mysql:host=localhost;dbname=turkoiv2';
-    private $username = "turkoiv2";
-    private $password = "webove aplikace";
+    private $dsn;
+    private $username;
+    private $password;
 
-    function __construct(){
+    function __construct()
+    {
+        $this->dsn = "mysql:host=localhost;dbname=".getenv("php_dbname") ?? "turkoiv2";
+        $this->username = getenv("php_dbusername") ?? "turkoiv2";
+        $this->password = getenv("php_dbpswd") ?? "webove aplikace";
     }
 
     function testConnection()
