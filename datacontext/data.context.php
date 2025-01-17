@@ -2,9 +2,9 @@
 
 class DataContext 
 {
-    private $dsn = 'mysql:host=localhost;dbname=eventmanagerdb';
-    private $username = "admin";
-    private $password = "Abc_1234";
+    private $dsn = 'mysql:host=localhost;dbname=turkoiv2';
+    private $username = "turkoiv2";
+    private $password = "webove aplikace";
 
     function __construct(){
     }
