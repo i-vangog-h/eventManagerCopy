@@ -1,0 +1,17 @@
+.pagination {
+    text-align: center;
+    margin-top: 1em;
+}
+.pagination a {
+    /* top right bottom left */
+    /* if ommited bottom=top, right=left */
+    padding: 0.5em 1em;
+    margin: 0 0.3em;
+    text-decoration: none;
+    color: white;
+    background-color: #8f8f8f;
+    border-radius: 5px;
+}
+.pagination a.active {
+    background-color: #4a4949;
+}
