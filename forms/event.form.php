@@ -26,7 +26,7 @@ if(isset($_POST["submit"]))
 
     $error = false;
 
-    // image is required for events
+    // image is required for the event to be created
     if(isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_NO_FILE) 
     {
         $statusText = "event image is required";

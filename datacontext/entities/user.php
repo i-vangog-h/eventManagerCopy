@@ -10,8 +10,14 @@ class User
         $this->createdAt = date('Y-m-d H:i:s');
     }
     
-    // Convert assoc. array user received from DB to User type object
-    public static function getUserFromDBResponse($userDb){
+    /**
+         * Converts an associative array representing the user entity, received from the DB query
+         * into a stongly typed User object.
+         *
+         * @param array $userDb An associative array representing the User entity.
+         * @return User Resulting User object.
+     */
+    public static function getUserFromDBResponse(array $userDb){
         $user = new User(
             $userDb["id"],
             $userDb["username"],

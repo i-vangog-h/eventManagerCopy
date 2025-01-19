@@ -146,9 +146,7 @@ if(isset($_POST["reduceAdmin"]))
                 <?php endif ?>
             </div>
     </div>
-
     <div class="container">
-
         <div class="section">
             <h2>Events</h2>
             <table>
@@ -205,7 +203,6 @@ if(isset($_POST["reduceAdmin"]))
                 <?php endfor; ?>
             </div>
         </div>
-
         <div class="section">
             <h2>Users</h2>
             <table>
@@ -262,7 +259,6 @@ if(isset($_POST["reduceAdmin"]))
                 <?php endfor; ?>
             </div>
         </div>
-
     </div>
 </body>
 </html>

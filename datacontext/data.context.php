@@ -30,6 +30,14 @@ class DataContext
         $dbc->close();
     }
 
+    /**
+         * Opens connection to the DB. Prepares the passed sql statement with the optional parameters.
+         * Executes no-response sql query. Dies with the error message when error occurs.
+         *
+         * @param string $sql SQL query to perform.
+         * @param ?array $params Array of optional query parametrs.
+         * @return void;
+     */
     public function executeSQL(string $sql, ?array $params = null)
     {
         try 
@@ -46,7 +54,17 @@ class DataContext
         }
     }
     
-    public function executeFromSQL(string $sql, ?array $params = null, $isParamsAsoc = false)
+    /**
+         * Opens connection to the DB. Prepares the passed sql statement with the optional parameters.
+         * Executes sql query. Dies with the error message when error occurs.
+         *
+         * @param string $sql SQL query to perform
+         * @param ?array $params
+         * @param bool $isParamsAsoc Flag, indicating that parametrs are passed as an associative array
+         * (is needed when Integer parametr needs to be bound).
+         * @return array Returns the query result as an associative array.
+     */
+    public function executeFromSQL(string $sql, ?array $params = null, bool $isParamsAsoc = false)
     {
         try 
         {
